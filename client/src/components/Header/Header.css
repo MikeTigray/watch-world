@@ -1,0 +1,20 @@
+.video-container {
+  position: relative;
+  text-align: center;
+  /* padding: 15em; */
+  /* background-color: aqua; */
+  overflow: hidden;
+  min-height: 100vh;
+}
+.video-bg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+}
+/* .intro {
+  margin: 15rem;
+} */
