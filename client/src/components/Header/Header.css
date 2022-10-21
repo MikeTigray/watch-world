@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap");
 .video-container {
   position: relative;
-  text-align: center;
+  /* text-align: center; */
   /* padding: 15em; */
-  /* background-color: aqua; */
+  background-color: rgba(1, 1, 1, 0.2);
   overflow: hidden;
   min-height: 100vh;
+  color: white;
 }
 .video-bg {
   position: absolute;
@@ -14,7 +16,39 @@
   transform: translate(-50%, -50%);
   min-height: 100%;
   min-width: 100%;
+  transition: 0.6s;
+}
+nav {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: 700;
+}
+nav label {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+}
+nav li {
+  text-decoration: none;
+  list-style: none;
+
+  display: inline-block;
+  padding: 0px 15px;
+  font-family: "EB Garamond", serif;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .video-bg {
+    min-height: 15%;
+    min-width: 15%;
+    left: 85%;
+    top: 85%;
+    transform: translate(-85%, -85%);
+  }
 }
 /* .intro {
-  margin: 15rem;
+  margin:15rem;
 } */
