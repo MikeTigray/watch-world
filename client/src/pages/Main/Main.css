@@ -1,0 +1,43 @@
+.container {
+  margin: 1rem;
+}
+.container h2 {
+  /* text-align: center; */
+  background-color: aqua;
+  text-align: left;
+  font-size: 4rem;
+  font-weight: bold;
+
+  letter-spacing: 0.5rem;
+  font-family: "Abril Fatface", cursive;
+}
+.container p {
+  font-size: 1.7rem;
+  line-height: 3rem;
+}
+
+.list-container {
+  background-color: bisque;
+}
+
+.list-container li {
+  text-decoration: none;
+  list-style: none;
+  /* display: inline;
+  margin: 7rem;
+  font-size: 1.2rem; */
+}
+@media screen and (max-width: 872px) {
+  .container h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 627px) {
+  .container p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .container h2 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,38 +1,31 @@
 import "./Navigation.css";
-import { useState } from "react";
+// import { useState, useEffect } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineLogin } from "react-icons/ai";
 
 export default function Navigation() {
-  const [cart, setCart] = useState("Cart");
-
   return (
-    <nav>
+    <nav className="nav">
       <label>watch-world</label>
+
       <ul>
         <li>
-          {/* {window.innerWidth <= 870 ? setCart("less than") : setCart("cart")} */}
-
-          <a
-            onChange={() =>
-              window.innerWidth <= 870
-                ? console.log(window.innerWidth)
-                : setCart("boo")
-            }
-            href="google.com"
-          >
-            {cart}
+          <a href="google.com">
+            <AiOutlineShoppingCart />
+            <span>cart</span>
           </a>
         </li>
         <li>
           <a href="google.com">
-            Wishlist <AiOutlineHeart />
+            <AiOutlineHeart />
+            <span>wishlist</span>
           </a>
         </li>
         <li>
           <a href="google.com">
-            Sign-In <AiOutlineLogin />
+            <AiOutlineLogin />
+            <span>sign-in</span>
           </a>
         </li>
       </ul>
