@@ -8,19 +8,21 @@ export default function Main() {
           Watch-World watches are crafted with scrupulous attention to detail.
         </h2>
         <p>
-          Explore the Rolex collection of prestigious, high-precision
-          timepieces. Rolex offers a wide assortment of Classic and Professional
-          watch models to suit any wrist. Discover the broad selection of Rolex
-          watches to find a perfect combination of style and functionality.
+          Explore the W-W collection of prestigious, high-precision timepieces.
+          We offer a wide assortment of Classic and Professional watch models to
+          suit any wrist. Discover the broad selection of W-W watches to find a
+          perfect combination of style and functionality.
         </p>
       </div>
-
-      <ul className="list-container">
-        <li>mechanical</li>
-        <li>automatic</li>
-        <li>quartz</li>
-        <li>solar</li>
-      </ul>
+      <div className="movements">
+        <h1>MOVEMENTS</h1>
+        <div className="list-container">
+          <div className="grid-item">mechanical</div>
+          <div className="grid-item">automatic</div>
+          <div className="grid-item">quartz</div>
+          <div className="grid-item">solar</div>
+        </div>
+      </div>
     </>
   );
 }

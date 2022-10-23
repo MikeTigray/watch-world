@@ -18,15 +18,13 @@
 
 .list-container {
   background-color: bisque;
+  display: grid;
+  grid-template-columns: 5rem 5rem;
+}
+.grid-item {
+  background-color: aquamarine;
 }
 
-.list-container li {
-  text-decoration: none;
-  list-style: none;
-  /* display: inline;
-  margin: 7rem;
-  font-size: 1.2rem; */
-}
 @media screen and (max-width: 872px) {
   .container h2 {
     font-size: 3rem;

@@ -1,0 +1,27 @@
+footer {
+  background-color: black;
+  color: white;
+}
+.section-wrapper {
+  /* background-color: bisque; */
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+}
+.section-inner h3 {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+.section-inner {
+  /* background-color: aqua; */
+}
+.section-inner ul li {
+  list-style: none;
+  text-decoration: none;
+}
+.up {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: aliceblue;
+}
