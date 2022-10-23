@@ -1,6 +1,6 @@
 footer {
   background-color: black;
-  color: white;
+  color: gray;
   min-height: 100vh;
   position: relative;
 }
@@ -24,10 +24,15 @@ footer {
   text-decoration: none;
   line-height: 2rem;
 }
+.section-inner a {
+  text-decoration: none;
+  color: gray;
+}
+
 .personal {
   font-family: "Courier New", Courier, monospace;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   position: absolute;
   bottom: 20%;
