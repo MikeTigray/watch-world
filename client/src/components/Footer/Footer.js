@@ -28,6 +28,13 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      <div className="personal">
+        <p>
+          <em>Message</em> : World-Watch is not a real website. It was developed
+          for educational purposes and I do not profit from any of the items or
+          watches on the website.
+        </p>
+      </div>
       <button className="up">
         <AiOutlineArrowUp />
       </button>

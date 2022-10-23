@@ -18,3 +18,13 @@
   min-width: 100%;
   transition: 0.6s;
 }
+.down {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: aliceblue;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
