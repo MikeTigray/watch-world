@@ -23,6 +23,10 @@ export default function Main() {
           <div className="grid-item">solar</div>
         </div>
       </div>
+
+      <div className="learn-container">
+        <div className="red">Red</div>
+      </div>
     </>
   );
 }
