@@ -3,6 +3,7 @@ import "./Navigation.css";
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineLogin } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function Navigation({ onClick }) {
   return (
@@ -11,20 +12,23 @@ export default function Navigation({ onClick }) {
 
       <ul>
         <li>
-          <a href="google.com">
+          <Link to="#">
             <AiOutlineShoppingCart />
             <span>cart</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <AiOutlineHeart />
-          <button onClick={onClick}>wishlist</button>
+          <Link onClick={onClick}>
+            {" "}
+            <AiOutlineHeart />
+            <span>wishlist</span>
+          </Link>
         </li>
         <li>
-          <a href="google.com">
+          <Link to="#">
             <AiOutlineLogin />
             <span>sign-in</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
