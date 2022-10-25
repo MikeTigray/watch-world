@@ -4,7 +4,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineLogin } from "react-icons/ai";
 
-export default function Navigation() {
+export default function Navigation({ onClick }) {
   return (
     <nav className="nav">
       <label>watch-world</label>
@@ -17,10 +17,8 @@ export default function Navigation() {
           </a>
         </li>
         <li>
-          <a href="google.com">
-            <AiOutlineHeart />
-            <span>wishlist</span>
-          </a>
+          <AiOutlineHeart />
+          <button onClick={onClick}>wishlist</button>
         </li>
         <li>
           <a href="google.com">

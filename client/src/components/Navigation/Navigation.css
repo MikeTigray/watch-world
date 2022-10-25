@@ -36,6 +36,7 @@
 span {
   padding-left: 0.5rem;
 }
+
 /* To make only icons visible */
 @media screen and (max-width: 910px) {
   span {
