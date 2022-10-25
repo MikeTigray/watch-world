@@ -1,4 +1,5 @@
 import "./Main.css";
+import Carousel from "../../components/Carousel/Carousel";
 export default function Main() {
   return (
     <>
@@ -14,7 +15,7 @@ export default function Main() {
           perfect combination of style and functionality.
         </p>
       </div>
-      <div className="movements">
+      {/* <div className="movements">
         <h1>MOVEMENTS</h1>
         <div className="list-container">
           <div className="grid-item">mechanical</div>
@@ -22,11 +23,8 @@ export default function Main() {
           <div className="grid-item">quartz</div>
           <div className="grid-item">solar</div>
         </div>
-      </div>
-
-      <div className="learn-container">
-        <div className="red">Red</div>
-      </div>
+      </div> */}
+      <Carousel />
     </>
   );
 }

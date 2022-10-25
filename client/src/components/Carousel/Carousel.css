@@ -1,0 +1,29 @@
+.carousel {
+  cursor: grab;
+  background-color: goldenrod;
+  min-width: 100vw;
+  height: 20rem;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.inner-carousel {
+  background-color: rgb(51, 119, 50);
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+}
+.image-container {
+  width: 25%;
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+}
+
+.image-container img {
+  height: 100%;
+  min-width: 25%;
+  border-radius: 20px;
+}
+.info {
+  line-height: 0px;
+}

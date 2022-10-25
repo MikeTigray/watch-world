@@ -1,4 +1,5 @@
 import "./Header.css";
+// import { motion } from "framer-motion";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import image from "../../assets/images/man-watching.mp4";
 import Navigation from "../Navigation/Navigation";
