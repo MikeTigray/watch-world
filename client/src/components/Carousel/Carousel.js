@@ -27,7 +27,7 @@ export default function Carousel() {
               <p>price: $299.00</p>
 
               <button>Add to cart</button>
-              <p>wishlist</p>
+              <button>Add to wishlist</button>
             </div>
           </motion.div>
           <motion.div className="image-container">
@@ -36,6 +36,9 @@ export default function Carousel() {
             <div className="info">
               <h4>Luther Chronograph</h4>
               <p>price: $299.00</p>
+
+              <button>Add to cart</button>
+              <button>Add to wishlist</button>
             </div>
           </motion.div>
           <motion.div className="image-container">
@@ -44,6 +47,9 @@ export default function Carousel() {
             <div className="info">
               <h4>Luther Chronograph</h4>
               <p>price: $299.00</p>
+
+              <button>Add to cart</button>
+              <button>Add to wishlist</button>
             </div>
           </motion.div>
           <motion.div className="image-container">
@@ -52,6 +58,9 @@ export default function Carousel() {
             <div className="info">
               <h4>Luther Chronograph</h4>
               <p>price: $299.00</p>
+
+              <button>Add to cart</button>
+              <button>Add to wishlist</button>
             </div>
           </motion.div>
           <motion.div className="image-container">
@@ -60,11 +69,32 @@ export default function Carousel() {
             <div className="info">
               <h4>Luther Chronograph</h4>
               <p>price: $299.00</p>
+
+              <button>Add to cart</button>
+              <button>Add to wishlist</button>
             </div>
           </motion.div>
           <motion.div className="image-container">
             <img alt="" src={image}></img>
-            <h4>Luther Chronograph </h4>
+            {/* <h4>Luther Chronograph </h4> */}
+            <div className="info">
+              <h4>Luther Chronograph</h4>
+              <p>price: $299.00</p>
+
+              <button>Add to cart</button>
+              <button>Add to wishlist</button>
+            </div>
+          </motion.div>
+          <motion.div className="image-container">
+            <img alt="" src={image}></img>
+            {/* <h4>Luther Chronograph </h4> */}
+            <div className="info">
+              <h4>Luther Chronograph</h4>
+              <p>price: $299.00</p>
+
+              <button>Add to cart</button>
+              <button>Add to wishlist</button>
+            </div>
           </motion.div>
         </motion.div>
       </motion.div>
