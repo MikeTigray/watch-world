@@ -12,20 +12,20 @@ export default function Navigation({ onClick }) {
 
       <ul>
         <li>
-          <Link to="#">
+          <Link to="/cart">
             <AiOutlineShoppingCart />
             <span>cart</span>
           </Link>
         </li>
         <li>
-          <Link onClick={onClick}>
+          <Link to="/wishlist" onClick={onClick}>
             {" "}
             <AiOutlineHeart />
             <span>wishlist</span>
           </Link>
         </li>
         <li>
-          <Link to="#">
+          <Link to="/sign-in">
             <AiOutlineLogin />
             <span>sign-in</span>
           </Link>

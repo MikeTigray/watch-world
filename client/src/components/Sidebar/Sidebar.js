@@ -1,6 +1,7 @@
 import "./Sidebar.css";
-import { animate, motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+
+// import { useState, useRef } from "react";
 
 export default function Sidebar({ show }) {
   return (
@@ -12,7 +13,13 @@ export default function Sidebar({ show }) {
           className="sidebar"
         >
           hi
-          <button onClick={() => {}}>close</button>
+          <button
+            onClick={() => {
+              console.log("clicked");
+            }}
+          >
+            close
+          </button>
         </motion.div>
       ) : (
         console.log("j")

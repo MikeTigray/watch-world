@@ -15,15 +15,6 @@ export default function Main() {
           perfect combination of style and functionality.
         </p>
       </div>
-      {/* <div className="movements">
-        <h1>MOVEMENTS</h1>
-        <div className="list-container">
-          <div className="grid-item">mechanical</div>
-          <div className="grid-item">automatic</div>
-          <div className="grid-item">quartz</div>
-          <div className="grid-item">solar</div>
-        </div>
-      </div> */}
       <Carousel />
     </>
   );
