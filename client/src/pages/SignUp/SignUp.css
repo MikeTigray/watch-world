@@ -1,5 +1,20 @@
 .signup {
   background: black;
   color: aliceblue;
-  height: 50vh;
+
+  /* height: 50vh; */
+  /* display: flex; */
+}
+label {
+  display: inline-block;
+  width: 10rem;
+  font-size: 2rem;
+}
+.submitBtn {
+  color: white;
+  font-size: 2rem;
+  background: none;
+  border: none;
+}
+.submitBtn[data-isOn="true"] {
 }

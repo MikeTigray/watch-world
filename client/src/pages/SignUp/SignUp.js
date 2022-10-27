@@ -1,9 +1,12 @@
 import "./SignUp.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FiSend } from "react-icons/fi";
 
 export default function SignUp() {
   const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleChange = (e) => {
     const target = e.target;
@@ -12,10 +15,11 @@ export default function SignUp() {
 
   return (
     <motion.div className="signup">
-      <div>
-        {" "}
-        <h2>Sign-Up</h2>
-        <form>
+      {" "}
+      <h2>Sign-Up</h2>
+      <form>
+        <div className="">
+          {" "}
           <label htmlFor="fullName">Full Name: </label>
           <input
             placeholder="Full name"
@@ -24,6 +28,9 @@ export default function SignUp() {
             id="fullName"
             onChange={handleChange}
           ></input>
+        </div>
+        <div>
+          {" "}
           <label htmlFor="email">Email: </label>
           <input
             placeholder="Email"
@@ -31,6 +38,9 @@ export default function SignUp() {
             type="email"
             id="email"
           ></input>
+        </div>
+        <div>
+          {" "}
           <label htmlFor="password">Password: </label>
           <input
             placeholder="******"
@@ -38,9 +48,14 @@ export default function SignUp() {
             type="password"
             id="password"
           ></input>
-        </form>
+        </div>
+      </form>
+      <div>
+        <motion.button className="submitBtn">
+          <FiSend />
+        </motion.button>
       </div>
-      <h1> {fullName}</h1>
+      <h1>{fullName}</h1>
     </motion.div>
   );
 }
