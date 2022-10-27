@@ -3,7 +3,8 @@ import "./App.css";
 import Landing from "./pages/Landing/Landing";
 // import Main from "./pages/Main/Main";
 // import Footer from "./components/Footer/Footer";
-import SignUp from "./pages/SignUp/SignUp";
+// import SignUp from "./pages/SignUp/SignUp";
+import SignIn from "./pages/SignIn/SignIn";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       {/* <Landing /> */}
       {/* <Main /> */}
       {/* <Footer /> */}
-      <SignUp />
+      {/* <SignUp /> */}
+      <SignIn />
     </Router>
   );
 }
