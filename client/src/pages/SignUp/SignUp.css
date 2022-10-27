@@ -25,6 +25,12 @@ label {
 }
 .submitBtn[data-isOn="true"] {
 }
+/* Client side form validation */
+
+input:invalid {
+  border: 2px solid red;
+}
+
 @media screen and (max-width: 700px) {
   .signup-grid {
     grid-template-columns: auto;

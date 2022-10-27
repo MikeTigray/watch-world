@@ -5,8 +5,8 @@ import { useState } from "react";
 import image from "../../assets/images/signup-image.jpg";
 export default function SignUp() {
   const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [password, setPassword] = useState("");
 
   const handleChange = (e) => {
     const target = e.target;
@@ -35,6 +35,7 @@ export default function SignUp() {
               name="email"
               type="email"
               id="email"
+              pattern="\w+@\w+\.\w+"
             ></input>
           </div>
           <div className="form-item">
@@ -44,13 +45,13 @@ export default function SignUp() {
               name="password"
               type="password"
               id="password"
+              minLength={6}
             ></input>
           </div>
         </form>
         <div className="form-item">
           <motion.button className="submitBtn">Sign-Up</motion.button>
         </div>
-        <h1>{fullName}</h1>
       </motion.div>
       <div className="image">
         <img src={image}></img>
