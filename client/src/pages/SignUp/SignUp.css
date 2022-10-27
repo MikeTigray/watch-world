@@ -1,20 +1,32 @@
+.signup-grid {
+  display: grid;
+  grid-template-columns: 30vw 80vw;
+  overflow: hidden;
+  height: 100vh;
+}
+.form-item {
+  padding: 1rem;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
 .signup {
   background: black;
   color: aliceblue;
-
-  /* height: 50vh; */
-  /* display: flex; */
 }
 label {
   display: inline-block;
-  width: 10rem;
-  font-size: 2rem;
+  width: 5rem;
+  font-size: 1rem;
 }
 .submitBtn {
-  color: white;
-  font-size: 2rem;
-  background: none;
-  border: none;
 }
 .submitBtn[data-isOn="true"] {
+}
+@media screen and (max-width: 700px) {
+  .signup-grid {
+    grid-template-columns: auto;
+  }
 }
