@@ -1,6 +1,13 @@
 import Header from "../../components/Header/Header";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import Main from "../Main/Main";
+import Footer from "../../components/Footer/Footer";
+
 export default function Landing() {
-  return <Header />;
-  <Sidebar />;
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
 }

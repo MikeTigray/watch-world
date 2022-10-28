@@ -18,7 +18,7 @@ export default function Navigation({ onClick }) {
           </Link>
         </li>
         <li>
-          <Link to="/wishlist" onClick={onClick}>
+          <Link onClick={onClick}>
             {" "}
             <AiOutlineHeart />
             <span>wishlist</span>

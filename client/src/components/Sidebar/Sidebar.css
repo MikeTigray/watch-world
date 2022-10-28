@@ -6,3 +6,6 @@
   top: 0;
   right: 0;
 }
+.sidebar[data-isShown="false"] {
+  right: -500px;
+}

@@ -1,11 +1,10 @@
 import "./SignIn.css";
 import React from "react";
 import { motion } from "framer-motion";
-import image from "../../assets/images/signin-1.jpg";
 export default function SignIn() {
   return (
     <div className="signin-grid ">
-      <div className="image">{/* <img src={image}></img> */}</div>
+      <div className="image"></div>
       <motion.div className="signin">
         <h2 className="form-item">Sign-In</h2>
         <form>

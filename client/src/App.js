@@ -1,20 +1,23 @@
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Landing from "./pages/Landing/Landing";
-// import Main from "./pages/Main/Main";
-// import Footer from "./components/Footer/Footer";
-// import SignUp from "./pages/SignUp/SignUp";
+
+import SignUp from "./pages/SignUp/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      {/* <Landing /> */}
-      {/* <Main /> */}
-      {/* <Footer /> */}
-      {/* <SignUp /> */}
-      <SignIn />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        {/* <Route path="/signup" element={<SignUp />} /> */}
+        {/* <Route path="/signin" element={<SignIn />} /> */}
+
+        {/* <Main /> */}
+        {/* <Footer /> */}
+        {/*  */}
+      </Routes>
     </Router>
   );
 }
