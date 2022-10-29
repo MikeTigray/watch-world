@@ -6,6 +6,6 @@
   top: 0;
   right: 0;
 }
-.sidebar[data-isShown="false"] {
+.sidebar[data-isshown="false"] {
   right: -500px;
 }
