@@ -6,7 +6,11 @@ import image from "../../assets/images/man-watching.mp4";
 import Navigation from "../Navigation/Navigation";
 import Sidebar from "../Sidebar/Sidebar";
 export default function Header() {
-  const [notShow, setShow] = useState();
+  const [show, setShow] = useState(false);
+
+  const toggle = () => {
+    setShow(!show);
+  };
 
   return (
     <>
@@ -22,7 +26,7 @@ export default function Header() {
         <video className="video-bg" autoPlay muted loop>
           <source src={image} type="video/mp4" />
         </video>
-        <Sidebar show={notShow} />
+        <Sidebar show={show} onClick={toggle} />
       </div>
     </>
   );

@@ -4,23 +4,17 @@ import { useState } from "react";
 
 // import { useState, useRef } from "react";
 
-export default function Sidebar({}) {
-  const [isShown, setIsShown] = useState(true);
-
-  const toggle = () => {
-    setIsShown(!isShown);
-  };
-
+export default function Sidebar({ onClick, show }) {
   return (
     <>
       <motion.div
-        data-isshown={isShown}
+        data-isshown={show}
         animate={{ x: 0 }}
         transition={{ duration: 5 }}
         className="sidebar"
       >
         hi
-        <button onClick={toggle}>close</button>
+        <button onClick={onClick}>close</button>
       </motion.div>
     </>
   );
