@@ -1,12 +1,18 @@
 import "./SignIn.css";
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 export default function SignIn() {
   return (
     <div className="signin-grid ">
       <div className="image"></div>
       <motion.div className="signin">
-        <h2 className="form-item">Sign-In</h2>
+        <h2 className="form-item">
+          Sign-In /{" "}
+          <Link to="/sign-up" className="go-to">
+            Go to Sign-Up
+          </Link>
+        </h2>
         <form>
           <div className="form-item">
             <label htmlFor="email">Email: </label>

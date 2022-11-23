@@ -21,6 +21,12 @@
   width: 5rem;
   font-size: 1rem;
 }
+.go-to {
+  text-decoration: none;
+}
+.go-to:hover {
+  text-decoration: underline;
+}
 .submitBtn {
 }
 .submitBtn[data-isOn="true"] {

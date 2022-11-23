@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import image from "../../assets/images/signup-image.jpg";
+import { Link } from "react-router-dom";
 export default function SignUp() {
   const [fullName, setFullName] = useState("");
   //   const [email, setEmail] = useState("");
@@ -16,7 +17,12 @@ export default function SignUp() {
   return (
     <div className="signup-grid">
       <motion.div className="signup">
-        <h2 className="form-item">Sign-Up</h2>
+        <h2 className="form-item">
+          Sign-Up /
+          <Link to="/sign-in" className="go-to">
+            Go to Sign-In
+          </Link>
+        </h2>
         <form>
           <div className="form-item">
             <label htmlFor="fullName">Full Name: </label>
