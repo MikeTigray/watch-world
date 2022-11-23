@@ -4,8 +4,9 @@
   background-color: blueviolet;
   position: fixed;
   top: 0;
-  right: 0;
+  right: 500px;
+  transition: 0.8s;
 }
 .sidebar[data-isshown="false"] {
-  right: -500px;
+  right: 0px;
 }

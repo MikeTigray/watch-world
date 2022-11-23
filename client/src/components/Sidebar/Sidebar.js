@@ -9,8 +9,8 @@ export default function Sidebar({ onClick, show }) {
     <>
       <motion.div
         data-isshown={show}
-        animate={{ x: 0 }}
-        transition={{ duration: 5 }}
+        animate={{ x: [300, 400, 500] }}
+        transition={{ duration: 2 }}
         className="sidebar"
       >
         hi

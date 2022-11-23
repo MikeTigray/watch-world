@@ -11,12 +11,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        {/* <Route path="/signup" element={<SignUp />} /> */}
-        {/* <Route path="/signin" element={<SignIn />} /> */}
-
-        {/* <Main /> */}
-        {/* <Footer /> */}
-        {/*  */}
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignIn />} />
       </Routes>
     </Router>
   );
