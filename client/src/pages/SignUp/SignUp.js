@@ -18,7 +18,7 @@ export default function SignUp() {
     <div className="signup-grid">
       <motion.div className="signup">
         <h2 className="form-item">
-          Sign-Up /
+          Sign-Up /{" "}
           <Link to="/sign-in" className="go-to">
             Go to Sign-In
           </Link>

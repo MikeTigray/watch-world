@@ -23,10 +23,12 @@
 }
 .go-to {
   text-decoration: none;
+  color: rgb(125, 86, 38);
 }
 .go-to:hover {
   text-decoration: underline;
 }
+
 .submitBtn {
 }
 .submitBtn[data-isOn="true"] {

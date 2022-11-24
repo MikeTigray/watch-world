@@ -15,11 +15,7 @@ export default function Header() {
   return (
     <>
       <div className="video-container">
-        <Navigation
-          onClick={() => {
-            setShow(true);
-          }}
-        />
+        <Navigation onClick={toggle} />
         <button className="down">
           <AiOutlineArrowDown />
         </button>
