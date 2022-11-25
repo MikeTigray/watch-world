@@ -7,12 +7,7 @@ import { useState } from "react";
 export default function Sidebar({ onClick, show }) {
   return (
     <>
-      <motion.div
-        data-isshown={show}
-        animate={{ x: [300, 400, 500] }}
-        transition={{ duration: 2 }}
-        className="sidebar"
-      >
+      <motion.div data-isshown={show} className="sidebar">
         hi
         <button onClick={onClick}>close</button>
       </motion.div>
