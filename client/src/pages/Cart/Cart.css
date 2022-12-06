@@ -1,0 +1,31 @@
+.shoppingtitle {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  width: 50vw;
+  padding-bottom: 10px;
+}
+.shoppinglist-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 1px solid green;
+  padding: 10px;
+}
+.shoppinglist {
+  width: 50vw;
+  height: 118px;
+
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  padding: 2px 25px;
+  gap: 15px;
+
+  width: 400px;
+  height: 556px;
+
+  background: #565abb;
+  border-radius: 20px;
+}

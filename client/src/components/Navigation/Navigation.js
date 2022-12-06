@@ -12,13 +12,13 @@ export default function Navigation({ onClick }) {
 
       <ul>
         <li>
-          <Link onClick={onClick}>
+          <Link to="/cart">
             <AiOutlineShoppingCart />
             <span>cart</span>
           </Link>
         </li>
         <li>
-          <Link>
+          <Link onClick={onClick}>
             {" "}
             <AiOutlineHeart />
             <span>wishlist</span>

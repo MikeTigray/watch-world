@@ -1,0 +1,18 @@
+.image-container {
+  text-align: center;
+  min-width: 15rem;
+  height: 30rem;
+  /* border: 1px solid black; */
+  margin: 5px;
+  /* display: flex; */
+}
+
+.image-container img {
+  border-bottom: 1px solid black;
+  height: 60%;
+  width: 100%;
+  /* border-radius: 20px; */
+}
+.info {
+  line-height: 0px;
+}

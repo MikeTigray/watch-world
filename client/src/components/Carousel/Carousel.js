@@ -1,8 +1,13 @@
 import "./Carousel.css";
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import Card from "../Card/Card";
+import image1 from "../../assets/images/fossil.jpeg";
+import image2 from "../../assets/images/Gen6.jpeg";
+import image3 from "../../assets/images/harry-potter.jpeg";
 
-import image from "../../assets/images/fossil.jpeg";
+const watches = [image1, image2, image3];
+
 export default function Carousel() {
   const [width, setWidth] = useState(0);
   const element = useRef();
@@ -19,83 +24,9 @@ export default function Carousel() {
           dragConstraints={{ right: 0, left: -width }}
           className="inner-carousel"
         >
-          <motion.div className="image-container">
-            <img alt="" src={image}></img>
-            {/* <h4>Luther Chronograph </h4> */}
-            <div className="info">
-              <h4>Luther Chronograph</h4>
-              <p>price: $299.00</p>
-
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
-            </div>
-          </motion.div>
-          <motion.div className="image-container">
-            <img alt="" src={image}></img>
-            {/* <h4>Luther Chronograph </h4> */}
-            <div className="info">
-              <h4>Luther Chronograph</h4>
-              <p>price: $299.00</p>
-
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
-            </div>
-          </motion.div>
-          <motion.div className="image-container">
-            <img alt="" src={image}></img>
-            {/* <h4>Luther Chronograph </h4> */}
-            <div className="info">
-              <h4>Luther Chronograph</h4>
-              <p>price: $299.00</p>
-
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
-            </div>
-          </motion.div>
-          <motion.div className="image-container">
-            <img alt="" src={image}></img>
-            {/* <h4>Luther Chronograph </h4> */}
-            <div className="info">
-              <h4>Luther Chronograph</h4>
-              <p>price: $299.00</p>
-
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
-            </div>
-          </motion.div>
-          <motion.div className="image-container">
-            <img alt="" src={image}></img>
-            {/* <h4>Luther Chronograph </h4> */}
-            <div className="info">
-              <h4>Luther Chronograph</h4>
-              <p>price: $299.00</p>
-
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
-            </div>
-          </motion.div>
-          <motion.div className="image-container">
-            <img alt="" src={image}></img>
-            {/* <h4>Luther Chronograph </h4> */}
-            <div className="info">
-              <h4>Luther Chronograph</h4>
-              <p>price: $299.00</p>
-
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
-            </div>
-          </motion.div>
-          <motion.div className="image-container">
-            <img alt="" src={image}></img>
-            {/* <h4>Luther Chronograph </h4> */}
-            <div className="info">
-              <h4>Luther Chronograph</h4>
-              <p>price: $299.00</p>
-
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
-            </div>
-          </motion.div>
+          {watches.map((image) => (
+            <Card image={image} price={299.0} title={"luther chronograph"} />
+          ))}
         </motion.div>
       </motion.div>
     </>
