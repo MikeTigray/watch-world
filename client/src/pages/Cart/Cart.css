@@ -17,33 +17,72 @@
   border-radius: 15px;
 }
 .inner-list-item {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
+  margin: 5px;
 }
 .item-image-container img {
   width: 80px;
   height: 82px;
 }
-.payment-container {
-  display: flex;
-  flex-direction: column;
-  /* align-items: flex-end; */
-  padding: 2px 25px;
-  gap: 15px;
 
-  width: 400px;
-  height: 556px;
-
-  background: #565abb;
-  border-radius: 20px;
-}
 .box {
   margin: 10px;
 }
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2px 25px;
+  gap: 15px;
+  color: white;
+  width: 400px;
+  height: 556px;
+  background: #565abb;
+  border-radius: 20px;
+}
 
+.payment-detail {
+  width: 400px;
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.payment-detail label {
+  width: 138px;
+  height: 21px;
+  font-family: "Poppins";
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 21px;
+}
+.payment-detail input {
+  width: 100%;
+  height: 40px;
+  background: #6268c6;
+  border-radius: 6px;
+  border: none;
+}
+.cost-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-btn {
+  color: white;
+  width: 100%;
+  background: #4de1c1;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-btn:hover {
+}
 @media screen and (max-width: 760px) {
   .shoppinglist-container {
     grid-template-columns: auto;
