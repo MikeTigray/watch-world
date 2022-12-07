@@ -6,15 +6,26 @@
 .shoppinglist-container {
   display: grid;
   grid-template-columns: auto auto;
-  border: 1px solid green;
   padding: 10px;
 }
 .shoppinglist {
   width: 50vw;
   height: 118px;
-
+  display: flex;
+  justify-content: space-between;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+}
+.inner-list-item {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.item-image-container img {
+  width: 80px;
+  height: 82px;
 }
 .payment-container {
   display: flex;
@@ -28,4 +39,21 @@
 
   background: #565abb;
   border-radius: 20px;
+}
+.box {
+  margin: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .shoppinglist-container {
+    grid-template-columns: auto;
+    padding: 0;
+  }
+  .shoppinglist {
+    width: 100%;
+  }
+  .shoppingtitle {
+    width: 100vw;
+    text-align: center;
+  }
 }
