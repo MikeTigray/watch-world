@@ -35,16 +35,16 @@ export default function Cart() {
             <h3>Card Details</h3>
             <form className="payment-submission">
               <div className="payment-detail">
-                <label>Name on Card</label>
-                <input />
+                <label htmlFor="cardName">Name on Card</label>
+                <input name="cardName" type="text" id="cardName" onChange />
               </div>
               <div className="payment-detail">
-                <label>Card Number</label>
-                <input />
+                <label htmlFor="cardNumber">Card Number</label>
+                <input name="cardNumber" type="text" id="cardNumber" onChange />
               </div>
               <div className="payment-detail">
-                <label>Expiration Date</label>
-                <input />
+                <label htmlFor="expirationDate">Expiration Date</label>
+                <input name="expirationDate" id="expirationDate" onChange />
               </div>
 
               <div className="cost-detail">

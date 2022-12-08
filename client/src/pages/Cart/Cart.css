@@ -82,6 +82,7 @@
   justify-content: space-between;
 }
 .checkout-btn:hover {
+  box-shadow: 10px 10px 25px 10px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 760px) {
   .shoppinglist-container {
