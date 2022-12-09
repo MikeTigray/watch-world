@@ -1,5 +1,5 @@
 const { User, Watch } = require("../models");
-
+const { AuthenticationError } = require("apollo-server-express");
 const resolvers = {
   Query: {
     users: async () => {
@@ -9,6 +9,12 @@ const resolvers = {
     watches: async () => {
       const watches = await Watch.find({});
       return watches;
+    },
+  },
+  Mutation: {
+    createUser: async (parent, args) => {
+      const user = await User.create(args);
+      return user;
     },
   },
 };
