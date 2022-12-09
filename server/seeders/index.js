@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const db = require("../config/connection");
-const { Watch } = require("../models");
+const { Watch, User } = require("../models");
 
-const data = [
+const watchData = [
   {
     name: "Forrester Chronograph",
     price: 150.0,
@@ -22,15 +22,26 @@ const data = [
     image: "",
   },
 ];
-
+const userData = [
+  {
+    fullName: "Mike Abay",
+    email: "miketesfay23@gmail.com",
+    password: "adminadmin",
+  },
+  {
+    fullName: "Eyuel Muler",
+    email: "eyumuler23@gmail.com",
+    password: "tigraytigray",
+  },
+];
 db.once("open", async () => {
   await Watch.deleteMany({});
+  await User.deleteMany({});
 
-  const watches = await Watch.insertMany(data);
+  const watches = await Watch.insertMany(watchData);
+  const users = await User.insertMany(userData);
 
-  console.log(watches, "Watches were successfully seeded! 👍🏽");
+  console.log("Data was successfully seeded! 👍🏽");
 
   process.exit();
 });
-
-module.exports = data;

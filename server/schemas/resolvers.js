@@ -3,10 +3,12 @@ const { User, Watch } = require("../models");
 const resolvers = {
   Query: {
     users: async () => {
-      User.find({});
+      const users = await User.find({});
+      return users;
     },
     watches: async () => {
-      Watch.find({});
+      const watches = await Watch.find({});
+      return watches;
     },
   },
 };
