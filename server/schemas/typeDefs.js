@@ -22,6 +22,7 @@ const typeDefs = gql`
   }
   type Mutation {
     createUser(fullName: String!, email: String!, password: String!): User
+    addToWishlist(watchId: ID!): Watch
   }
 `;
 
