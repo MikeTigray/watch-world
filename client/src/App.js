@@ -18,22 +18,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-client
-  .query({
-    query: gql`
-      query Watches {
-        watches {
-          brand
-          image
-          name
-          price
-          _id
-        }
-      }
-    `,
-  })
-  .then((result) => console.log(result));
-
 function App() {
   return (
     <ApolloProvider client={client}>

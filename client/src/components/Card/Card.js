@@ -1,10 +1,9 @@
 import "./Card.css";
 import React from "react";
-
-export default function Card({ image, title, price }) {
+export default function Card({ alt, image, title, price }) {
   return (
     <div className="image-container">
-      <img alt="" src={image}></img>
+      <img alt={alt} src={require(`../../assets/images/${image}`)}></img>
       {/* <h4>Luther Chronograph </h4> */}
       <div className="info">
         <h4>{title}</h4>
