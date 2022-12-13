@@ -1,6 +1,6 @@
 const { gql } = require("@apollo/client");
 
-export const GET_WATCHES = gql`
+export const QUERY_ALL_WATCHES = gql`
   query Watches {
     watches {
       brand

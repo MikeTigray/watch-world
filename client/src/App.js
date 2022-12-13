@@ -6,16 +6,46 @@ import SignUp from "./pages/SignUp/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  gql,
+} from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: "/graphql",
+  cache: new InMemoryCache(),
+});
+
+client
+  .query({
+    query: gql`
+      query Watches {
+        watches {
+          brand
+          image
+          name
+          price
+          _id
+        }
+      }
+    `,
+  })
+  .then((result) => console.log(result));
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </Router>
+    <ApolloProvider client={client}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
+    </ApolloProvider>
   );
 }
 
