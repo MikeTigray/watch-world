@@ -1,49 +1,52 @@
 import "./Carousel.css";
-import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+
 import Card from "../Card/Card";
-// import image1 from "../../assets/images/fossil.jpeg";
-// import image2 from "../../assets/images/Gen6.jpeg";
-// import image3 from "../../assets/images/harry-potter.jpeg";
+
 import { QUERY_ALL_WATCHES } from "../../utils/queries";
 import { useQuery } from "@apollo/client";
 
-// const watches = [image1, image2, image3];
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+
+const responsive = {
+  0: {
+    items: 1,
+  },
+  568: {
+    items: 3,
+  },
+  700: {
+    items: 2,
+  },
+  1024: {
+    items: 4,
+    itemsFit: "contain",
+  },
+};
 
 export default function Carousel() {
   const { loading, error, data } = useQuery(QUERY_ALL_WATCHES);
 
-  const [width, setWidth] = useState(0);
-  const element = useRef();
-
-  // useEffect(() => {
-  //   setWidth(element.current.scrollWidth - element.current.offsetWidth);
-  // }, []);
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
+  const items = data.watches.map(({ name, price, image }, index) => (
+    <Card title={name} key={index} alt={name} image={image} price={price} />
+  ));
+
+  console.log(items);
   return (
     <>
-      <motion.div ref={element} className="carousel">
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className="inner-carousel"
-        >
-          {data
-            ? data.watches.map(({ name, price, brand, image }, index) => (
-                <Card
-                  alt={name}
-                  key={index}
-                  image={image}
-                  price={price}
-                  title={name}
-                />
-              ))
-            : loading}
-        </motion.div>
-      </motion.div>
+      {data ? (
+        <AliceCarousel
+          mouseTracking
+          items={items}
+          responsive={responsive}
+          controlsStrategy="alternate"
+        />
+      ) : (
+        error
+      )}
     </>
   );
 }
