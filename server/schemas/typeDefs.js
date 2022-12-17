@@ -13,7 +13,7 @@ const typeDefs = gql`
     fullName: String
     email: String
     password: String
-    wishlist: [ID]
+    wishlist: [Watch]
   }
 
   type Query {
@@ -22,7 +22,7 @@ const typeDefs = gql`
   }
   type Mutation {
     createUser(fullName: String!, email: String!, password: String!): User
-    addToWishlist(watchId: ID!): Watch
+    addWatchToWishlist(watchId: ID!, userId: ID!): User
   }
 `;
 

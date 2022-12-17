@@ -15,11 +15,9 @@ const responsive = {
   568: {
     items: 3,
   },
-  700: {
-    items: 2,
-  },
+
   1024: {
-    items: 4,
+    items: 5,
     itemsFit: "contain",
   },
 };
@@ -34,7 +32,6 @@ export default function Carousel() {
     <Card title={name} key={index} alt={name} image={image} price={price} />
   ));
 
-  console.log(items);
   return (
     <>
       {data ? (
