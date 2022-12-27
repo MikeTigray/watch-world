@@ -1,5 +1,6 @@
+const mongoose = require("mongoose");
 const { Schema, model } = require("mongoose");
-// const watchSchema = require("./Watch");
+const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({
   fullName: {
@@ -19,6 +20,20 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   wishlist: [{ type: Schema.Types.ObjectId, ref: "Watch" }],
 });
+
+userSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
+
+userSchema.methods.isCorrectPassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
+
 const User = model("User", userSchema);
 
 module.exports = User;

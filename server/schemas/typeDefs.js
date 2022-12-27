@@ -15,14 +15,19 @@ const typeDefs = gql`
     password: String
     wishlist: [Watch]
   }
+  type Auth {
+    token: ID
+    user: User
+  }
 
   type Query {
     users: [User]
     watches: [Watch]
   }
   type Mutation {
-    createUser(fullName: String!, email: String!, password: String!): User
+    createUser(fullName: String!, email: String!, password: String!): Auth
     addWatchToWishlist(watchId: ID!, userId: ID!): User
+    login(email: String!, password: String!): Auth
   }
 `;
 

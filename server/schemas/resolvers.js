@@ -4,12 +4,12 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    users: async (root, args, context) => {
+    users: async () => {
       const users = await User.find({}).populate("wishlist");
-      console.log("from users: ", context.req.query);
+
       return users;
     },
-    watches: async (a, b, c) => {
+    watches: async () => {
       const watches = await Watch.find({});
 
       return watches;
@@ -19,7 +19,6 @@ const resolvers = {
     createUser: async (parent, args, context) => {
       const user = await User.create(args);
       const token = signToken(user);
-      console.log("token is :", token);
       return { user, token };
     },
     addWatchToWishlist: async (parent, { watchId, userId }) => {
@@ -32,6 +31,23 @@ const resolvers = {
       );
 
       return user;
+    },
+
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError("Incorrect credentials");
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect credentials");
+      }
+      const token = signToken(user);
+
+      return { token, user };
     },
   },
 };
